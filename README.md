@@ -1,4 +1,4 @@
-#### stack
+#### stack:
       
     angular v 15
 
@@ -14,7 +14,7 @@
   
     npm i
   
-##### up project
+##### up project:
 
     npm start
 
