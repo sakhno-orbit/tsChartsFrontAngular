@@ -1,0 +1,10 @@
+.chart-line-wrapper {
+  margin: 5px;
+  min-width: 70vw;
+  min-height: 500px;
+  height: auto;
+  color: rgb(182, 4, 4);
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ffffff, #0cb9e8);
+  background-attachment: fixed;
+}

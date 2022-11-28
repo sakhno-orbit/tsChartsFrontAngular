@@ -1,0 +1,57 @@
+<h4 *ngIf="!uiActive" class="chart-loading">loading...</h4>
+<div *ngIf="uiActive" class="chat-wrapper">
+  <div class="chart-view">
+    <div *ngIf="chartsData.length">
+      <div class="chart-row" >
+        <mat-label>{{chartsData[chartIndex].header}}</mat-label>
+        <app-line-chart
+          [chartType]="chosenChartType"
+        >
+        </app-line-chart>
+      </div>
+    </div>
+  </div>
+  <div class="chart-ui print">
+    <div style="width: auto">
+
+      <div class="chart-ui-button-group">
+        <mat-button-toggle
+          [disabled]="!uiActive"
+          (click)="uiActive && previousChartIndex(chartsData.length)"
+        >
+          prev
+        </mat-button-toggle>
+        <mat-label>{{chartIndex + 1}}</mat-label>
+        <mat-button-toggle
+          [disabled]="!uiActive"
+          (click)="uiActive && nextChartIndex(chartsData.length)"
+        >
+          next
+        </mat-button-toggle>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Chart type</mat-label>
+          <mat-select
+            disabled="{{!uiActive}}"
+            [(value)]="chosenChartType"
+          >
+            <mat-option *ngFor="let chType of chartTypes" [value]="chType">
+              {{chType}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="chart-ui-button-group">
+        <mat-button-toggle
+          [disabled]="!uiActive"
+          (click)="print()"
+        >
+          print
+        </mat-button-toggle>
+      </div>
+    </div>
+  </div>
+</div>

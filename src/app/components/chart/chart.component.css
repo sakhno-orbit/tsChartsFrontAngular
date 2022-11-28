@@ -1,0 +1,54 @@
+.chart-loading{
+  text-align: center;
+}
+
+.chat-wrapper {
+  min-width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.chart-view {
+  max-width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.chart-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.chart-ui {
+  max-width: 20vw;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+  margin-left: 5px;;
+}
+
+.chart-ui-button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+@media print {
+  .chart-ui {
+    display: none;
+  }
+}
